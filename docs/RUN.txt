@@ -1,1 +1,30 @@
-Build/run notes will go here (Linux). TODO: fill after code is ready.
+CST-310 Project 6 — Run Instructions (Linux)
+
+Tested on: Ubuntu 22.04/24.04 (native or WSLg)
+
+1) Install dependencies
+   sudo apt update && sudo apt install -y build-essential libglfw3-dev libglew-dev libglm-dev mesa-utils
+
+2) Verify OpenGL
+   glxinfo -B | grep -E 'OpenGL.*version|renderer'
+   # Expect OpenGL ≥ 3.3 and a real renderer (not llvmpipe if possible).
+
+3) Build (from repo root)
+   g++ -std=c++17 src/main.cpp -lglfw -lGLEW -lGL -ldl -lX11 -lpthread -lXrandr -lXi -o specular-grid
+
+4) Run
+   ./specular-grid
+
+5) Screenshot for submission
+   • Press your OS screenshot key to capture the window.
+   • Save it to: assets/screenshots/shininess-grid.png
+   • git add -A && git commit -m "add result screenshot" && git push
+
+Troubleshooting
+- If GLEW init fails: ensure the window hints request Core 3.3 and your GPU/VM supports it.
+- If renderer shows "llvmpipe": enable 3D acceleration in your VM (virgl) and install host/guest graphics drivers.
+- If the highlight position differs slightly: tweak light.position in src/main.cpp by ±0.3 on x/z.
+
+Notes
+- Shaders must be present at: shaders/phong.vert and shaders/phong.frag
+- Background color and material are tuned to match the reference image.
