@@ -1,0 +1,14 @@
+libGL: Can't open configuration file /etc/drirc: No such file or directory.
+libGL: Can't open configuration file /home/keny/.drirc: No such file or directory.
+libGL: using driver virtio_gpu for 5
+libGL: Can't open configuration file /etc/drirc: No such file or directory.
+libGL: Can't open configuration file /home/keny/.drirc: No such file or directory.
+libGL: pci id for fd 5: 1af4:0010, driver virtio_gpu
+libGL: MESA-LOADER: dlopen(/usr/lib/aarch64-linux-gnu/dri/virtio_gpu_dri.so)
+libGL: Can't open configuration file /etc/drirc: No such file or directory.
+libGL: Can't open configuration file /home/keny/.drirc: No such file or directory.
+libGL: Can't open configuration file /etc/drirc: No such file or directory.
+libGL: Can't open configuration file /home/keny/.drirc: No such file or directory.
+libGL: Can't open configuration file /etc/drirc: No such file or directory.
+libGL: Can't open configuration file /home/keny/.drirc: No such file or directory.
+libGL: Using DRI3 for screen 0

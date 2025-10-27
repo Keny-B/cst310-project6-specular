@@ -16,7 +16,7 @@ void main(){
     vec3 V = normalize(viewPos - FragPos);
 
     float diff = max(dot(N,L), 0.0);
-    vec3 R = reflect(-L, N);
+    vec3  R    = reflect(-L, N);
     float spec = pow(max(dot(V,R), 0.0), material.shininess);
 
     vec3 ambient  = light.ambient  * material.ambient;
